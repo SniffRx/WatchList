@@ -1,0 +1,1 @@
+<?php return array('default'=>array('name'=>'Default templates','version'=>'0.1','author'=>'SniffRx'));

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+  }
+  
+body::-webkit-scrollbar-track {
+    background: transparent!important;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white!important;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent!important;  /* creates padding around scroll thumb */
+  }
+
+main::-webkit-scrollbar {
+    width: 22px;               /* width of the entire scrollbar */
+    z-index: 999;
+  }
+  
+main::-webkit-scrollbar-track {
+    background: transparent!important;        /* color of the tracking area */
+    z-index: 999;
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background-color: white!important;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent!important;  /* creates padding around scroll thumb */
+    z-index: 999;
+  }
+
+main {
+    overflow: auto;
+}
+
+body {
+    background-color: #11052C!important;
+    overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+}
+
+.bg-dark {
+    background-color: #2A203F!important;
+border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark-profile {
+    background-color: rgb(42 32 63 / 50%)!important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+    background: rgba(35, 28, 51, 0.5);
+border: 1px solid rgba(222, 222, 222, 0.1);
+border-radius: 21px;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, #F43B86 50.88%, #FF85B6 155.26%);
+    border: 1px solid rgba(222, 222, 222, 0.1);
+    border-radius: 19px;
+    color:white!important;
+}
+
+.btn-primary.search-btn {
+    border-radius: 19px 19px 0 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #ff5c57;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.62)!important;
+}
+
+.card-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-dark {
+    background: radial-gradient(112.13% 126.87% at 50% -26.87%, #2A203F 0%, #160D2B 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 42px;
+}
+
+#notes
+{
+    position: fixed;
+    top: 4em;
+    right: 5px;
+    cursor: default;
+    transition: height .45s ease-in-out;
+    -webkit-transition: height .45s ease-in-out;
+    pointer-events: none;
+    z-index: 1001;
+}
+#notes .note-item
+{
+    max-height: 12em;
+    border-radius: 5px;
+    opacity: 1;
+    will-change: opacity, transform;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    width: 50vw;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    z-index: 1002;
+    pointer-events: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    max-width: 20em;
+    font: inherit;
+    line-height: 1.25em;
+    color: #fff;
+    margin: 0 auto 3px auto;
+    transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    padding: .75em 1em;
+}
+@media all and (max-width: 30em)
+{
+    #notes .note-item
+    {
+        width: 75vw;
+        max-width: none;
+    }
+}
+#notes .note-item[data-show="false"]
+{
+    pointer-events: none;
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+}
+#notes .note-item[data-type="info"]
+{
+    background-color: #375e97;
+}
+#notes .note-item[data-type="warn"]
+{
+    background-color: var(--span-color);
+    animation: shake 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    -webkit-animation: shake 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+#notes .note-item[data-type="error"]
+{
+    background-color: #fb6542;
+    animation: shake 0.54s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    -webkit-animation: shake 0.54s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+#notes .note-item[data-type="success"]
+{
+    background-color: #009d09;
+}
+#notes .note-item .note-item-text
+{
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    padding-right: .5em;
+    max-width: calc(100% - 1.25em);
+    max-width: -webkit-calc(100% - 1.25em);
+}
+#notes .note-item .note-item-btn
+{
+    width: 0.25em;
+    height: 1.25em;
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    cursor: pointer;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTguMyw1LjcxTDE4LjMsNS43MWMtMC4zOS0wLjM5LTEuMDItMC4zOS0xLjQxLDBMMTIsMTAuNTlMNy4xMSw1LjdjLTAuMzktMC4zOS0xLjAyLTAuMzktMS40MSwwbDAsMCBjLTAuMzksMC4zOS0wLjM5LDEuMDIsMCwxLjQxTDEwLjU5LDEyTDUuNywxNi44OWMtMC4zOSwwLjM5LTAuMzksMS4wMiwwLDEuNDFoMGMwLjM5LDAuMzksMS4wMiwwLjM5LDEuNDEsMEwxMiwxMy40MWw0Ljg5LDQuODkgYzAuMzksMC4zOSwxLjAyLDAuMzksMS40MSwwbDAsMGMwLjM5LTAuMzksMC4zOS0xLjAyLDAtMS40MUwxMy40MSwxMmw0Ljg5LTQuODlDMTguNjgsNi43MywxOC42OCw2LjA5LDE4LjMsNS43MXoiLz48L3N2Zz4=) no-repeat 0 0/contain;
+    transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+}
+
+#notes .note-item .note-item-btn:hover
+{
+    opacity: .6;
+}
