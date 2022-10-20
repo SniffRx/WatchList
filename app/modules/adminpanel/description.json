@@ -1,0 +1,21 @@
+{
+  "title": "Admin Panel [Alpha]",
+  "info": "Administrator panel allows flexible management of site settings",
+  "author": "SniffRx",
+  "page": "adminpanel",
+  "version": "0.1",
+  "required": {
+    "core": "0.2",
+    "php": "7.0"
+  },
+  "setting": {
+    "status": 1,
+    "type": 1,
+    "available_types": 1,
+    "interface": 1,
+    "interface_adjacent": "afternavbar",
+    "data": 1,
+    "css": 1,
+    "js": 1
+  }
+}

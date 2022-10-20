@@ -1,0 +1,21 @@
+{
+    "title": "Main Catalog",
+    "info": "Anime catalog on main page",
+    "author": "SniffRx",
+    "page": "home",
+    "version": 0.1,
+    "required": {
+        "core": 0.2,
+        "php": 7.0
+    },
+    "setting": {
+        "status": 1,
+        "type": 1,
+        "available_types": 1,
+        "interface": 1,
+        "interface_adjacent": "afternavbar",
+        "data":1,
+        "js":0,
+        "css": 1
+    }
+}
